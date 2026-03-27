@@ -537,7 +537,7 @@ function showProbeCard() {
   if (probeIndex >= probeCards.length) { showProbeResults(); return; }
   const card = probeCards[probeIndex];
   document.getElementById('probe-latin-word').textContent = card.latin_word;
-  document.getElementById('probe-forms').textContent = card.forms || '';
+  document.getElementById('probe-forms').textContent = '';
   document.getElementById('probe-input').value = '';
   document.getElementById('probe-input').focus();
   document.getElementById('probe-progress-text').textContent = `Frage ${probeIndex + 1} von ${probeCards.length}`;
@@ -900,7 +900,7 @@ function showStudentCard() {
   if (studentIndex >= studentCards.length) { submitStudentTest(); return; }
   const card = studentCards[studentIndex];
   document.getElementById('student-latin-word').textContent = card.latin_word;
-  document.getElementById('student-forms').textContent = card.forms || '';
+  document.getElementById('student-forms').textContent = '';
   document.getElementById('student-input').value = '';
   document.getElementById('student-input').focus();
   document.getElementById('student-progress-text').textContent = `Frage ${studentIndex + 1} von ${studentCards.length}`;
